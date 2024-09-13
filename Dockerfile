@@ -1,6 +1,12 @@
-FROM ubuntu:latest
+FROM python:3.9-slim
 
 WORKDIR /workspace
-COPY train.py /workspace/
 
-CMD ["python", "train.py"]
+COPY requirements.txt requirements.txt
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+#ENTRYPOINT ["python", "train.py"]
+CMD [ "/bin/bash" ]
