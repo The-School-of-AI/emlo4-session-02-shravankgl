@@ -23,3 +23,36 @@ The provided starter code in train.py provides a basic structure for loading dat
 ## Submission
 
 When you have completed the assignment, push your code to your Github repository. The Github Actions workflow will automatically build your Docker image, run your training script, and check if the assignment requirements have been met. Check the Github Actions tab for the results of these checks. Make sure that all checks are passing before you submit the assignment.
+
+## How to build and run
+1. clone the repository
+```
+https://github.com/The-School-of-AI/emlo4-session-02-shravankgl.git
+```
+2. build the image
+```
+docker build -t assignment2
+```
+3. run the image
+```
+docker run -it assignment2
+```
+4. run using saved weights
+```
+docker run -it assignment2 --resume
+```
+
+
+## How to run from dockerhub image
+1. Pull Image from docker hub
+```
+docker pull shravankgl/elmo4-tsai:session2
+```
+2. run the image
+```
+docker run -it shravankgl/elmo4-tsai:session2
+```
+3. run using saved weights
+```
+docker run -it shravankgl/elmo4-tsai:session2 --resume
+```
